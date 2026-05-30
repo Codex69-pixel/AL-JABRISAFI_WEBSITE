@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop — AL-Jabrisafi Organic Beauty | Natural Skincare, Haircare & Wellness Kenya</title>
+  <meta name="description" content="Shop all AL-Jabrisafi premium organic beauty products. Natural skincare, herbal haircare and wellness products handcrafted with African botanicals. Fast delivery across Nairobi and Bungoma, Kenya.">
+  <meta name="keywords" content="buy organic skincare Kenya, herbal face oil Nairobi, natural haircare products Kenya, African botanical beauty, organic beauty shop Kenya">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://al-jabrisafi.com/products.html">
+  <meta property="og:title" content="Shop — AL-Jabrisafi Organic Beauty">
+  <meta property="og:description" content="Natural skincare, haircare & wellness products handcrafted with African botanicals.">
+  <meta property="og:image" content="images/1000139489.jpg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='16' fill='%231F3A36'/><path d='M16 8 Q20 12 16 16 Q12 12 16 8Z' fill='%23C0C0C0'/></svg>">
+  <style>
+    .products-grid-full {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    @media(max-width:1024px){ .products-grid-full{ grid-template-columns: repeat(3,1fr); } }
+    @media(max-width:768px){ .products-grid-full{ grid-template-columns: repeat(2,1fr); gap:16px; } }
+    @media(max-width:380px){ .products-grid-full{ grid-template-columns: 1fr; } }
+    .shop-layout { display:flex; gap:32px; align-items:flex-start; }
+    .shop-sidebar {
+      width:220px; flex-shrink:0;
+      background:var(--white);
+      border-radius:4px;
+      padding:24px;
+      box-shadow:var(--shadow-sm);
+      position:sticky; top:140px;
+    }
+    .shop-main { flex:1; }
+    .sidebar-title {
+      font-size:0.62rem; font-weight:700;
+      letter-spacing:0.18em; text-transform:uppercase;
+      color:var(--text-m); margin-bottom:14px;
+    }
+    .sidebar-cat-list { margin-bottom:28px; }
+    .sidebar-cat-list li { margin-bottom:2px; }
+    .sidebar-cat-btn {
+      width:100%; text-align:left;
+      background:none; border:none;
+      padding:9px 12px; font-size:0.8rem;
+      color:var(--text-m); cursor:pointer;
+      border-radius:3px; transition:all .2s;
+      font-family:var(--ff-body); font-weight:500;
+      display:flex; align-items:center; gap:8px;
+    }
+    .sidebar-cat-btn::before {
+      content:''; width:6px; height:6px;
+      border-radius:50%; background:var(--cream-d);
+      flex-shrink:0; transition:background .2s;
+    }
+    .sidebar-cat-btn:hover, .sidebar-cat-btn.active { color:var(--green); background:rgba(31,58,54,.06); }
+    .sidebar-cat-btn.active::before { background:var(--green); }
+    .sidebar-price { margin-bottom:8px; }
+    .price-range-labels { display:flex; justify-content:space-between; font-size:0.72rem; color:var(--text-l); margin-top:6px; }
+    input[type=range] { width:100%; accent-color:var(--green); }
+    .sort-row {
+      display:flex; align-items:center; justify-content:space-between;
+      margin-bottom:22px;
+    }
+    .sort-select {
+      padding:8px 12px; border:1.5px solid var(--cream-d);
+      border-radius:3px; font-size:0.78rem; color:var(--text);
+      background:var(--white); outline:none; cursor:pointer;
+      font-family:var(--ff-body);
+    }
+    .sort-select:focus { border-color:var(--green); }
+    @media(max-width:768px){
+      .shop-layout { flex-direction:column; }
+      .shop-sidebar { width:100%; position:static; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Promo Banner -->
+<div id="promo-banner">
+  🌿 FREE DELIVERY on orders over KES 5,000 &nbsp;|&nbsp; 100% Natural Ingredients &nbsp;|&nbsp; Handcrafted in Kenya
+</div>
+
+<!-- Navigation -->
+<nav id="main-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <a href="index.html" aria-label="AL-Jabrisafi Home">
+        <img src="images/al jabri logo.jpeg" alt="AL-Jabrisafi Logo" class="logo-mark" style="max-height: 48px; width: auto;">
+        <div class="logo-text">
+          <span class="logo-name">AL-JABRISAFI</span>
+          <span class="logo-sub">Organic Beauty</span>
+        </div>
+      </a>
+    </div>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html" class="active">Shop</a></li>
+      <li><a href="products.html?cat=skincare">Skincare</a></li>
+      <li><a href="products.html?cat=haircare">Haircare</a></li>
+      <li><a href="products.html?cat=wellness">Wellness</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="products.html" class="nav-icon-btn" aria-label="Search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </a>
+      <button class="nav-icon-btn cart-btn" aria-label="Open cart">
+        <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 001.99 1.61h9.72a2 2 0 001.99-1.61L23 6H6"/></svg>
+        <span class="cart-count active" id="cart-count">0</span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<nav class="mobile-menu" id="mobile-menu">
+  <button class="mobile-close" id="mobile-close">&times;</button>
+  <a href="index.html">Home</a>
+  <a href="products.html">Shop All</a>
+  <a href="products.html?cat=skincare">Skincare</a>
+  <a href="products.html?cat=haircare">Haircare</a>
+  <a href="products.html?cat=wellness">Wellness</a>
+  <a href="about.html">About Us</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<!-- Page Hero -->
+<section class="page-hero" aria-label="Shop page header">
+  <div class="container" style="position:relative;z-index:1;">
+    <p class="section-label" style="color:var(--silver);display:block;margin-bottom:12px;">All Products</p>
+    <h1>Shop Our Collection</h1>
+    <p>Handcrafted with African botanicals — premium organic beauty for natural, radiant you.</p>
+  </div>
+</section>
+
+<!-- Filter Bar (top tabs) -->
+<div class="filter-bar" role="navigation" aria-label="Product category filter">
+  <div class="filter-bar-inner container">
+    <button class="filter-btn active" data-cat="all" onclick="filterByCategory('all',this)">All Products</button>
+    <button class="filter-btn" data-cat="skincare" onclick="filterByCategory('skincare',this)">Skincare</button>
+    <button class="filter-btn" data-cat="haircare" onclick="filterByCategory('haircare',this)">Haircare</button>
+    <button class="filter-btn" data-cat="wellness" onclick="filterByCategory('wellness',this)">Wellness</button>
+    <button class="filter-btn" data-cat="giftsets" onclick="filterByCategory('giftsets',this)">Gift Sets</button>
+  </div>
+</div>
+
+<!-- Shop Grid -->
+<section id="shop-grid" aria-labelledby="shop-title">
+  <div class="container">
+    <div class="shop-layout">
+
+      <!-- Sidebar -->
+      <aside class="shop-sidebar">
+        <div class="sidebar-title">Categories</div>
+        <ul class="sidebar-cat-list">
+          <li><button class="sidebar-cat-btn active" onclick="filterByCategory('all',this,'sidebar')">All Products</button></li>
+          <li><button class="sidebar-cat-btn" onclick="filterByCategory('skincare',this,'sidebar')">Skincare</button></li>
+          <li><button class="sidebar-cat-btn" onclick="filterByCategory('haircare',this,'sidebar')">Haircare</button></li>
+          <li><button class="sidebar-cat-btn" onclick="filterByCategory('wellness',this,'sidebar')">Wellness</button></li>
+          <li><button class="sidebar-cat-btn" onclick="filterByCategory('giftsets',this,'sidebar')">Gift Sets</button></li>
+        </ul>
+
+        <div class="sidebar-title">Price Range</div>
+        <div class="sidebar-price">
+          <input type="range" id="price-range" min="0" max="6000" step="500" value="6000" oninput="updatePriceFilter(this.value)">
+          <div class="price-range-labels">
+            <span>KES 0</span>
+            <span id="price-max-label">KES 6,000+</span>
+          </div>
+        </div>
+
+        <div class="sidebar-title" style="margin-top:20px;">Sort By</div>
+        <select class="sort-select" id="sort-select" onchange="sortProducts(this.value)" style="width:100%">
+          <option value="default">Featured</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="name">Name A–Z</option>
+        </select>
+      </aside>
+
+      <!-- Main Products Area -->
+      <div class="shop-main">
+        <div class="sort-row">
+          <p class="products-count" id="products-count">Showing 12 products</p>
+        </div>
+        <div class="products-grid-full" id="products-grid">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-name">AL-JABRISAFI</div>
+        <div class="logo-sub">Organic Beauty</div>
+        <p>Premium natural beauty products handcrafted with African botanicals. Delivering luxury skincare, haircare and wellness across Kenya.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" class="social-btn" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="#" class="social-btn" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"/></svg></a>
+          <a href="#" class="social-btn" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Shop All</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="products.html?cat=skincare">Skincare</a></li>
+          <li><a href="products.html?cat=haircare">Haircare</a></li>
+          <li><a href="products.html?cat=wellness">Wellness</a></li>
+          <li><a href="products.html?cat=giftsets">Gift Sets</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <div class="footer-contact-item"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Nairobi &amp; Bungoma, Kenya</span></div>
+        <div class="footer-contact-item"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.47 8.64a19.79 19.79 0 01-3.07-8.6A2 2 0 012.37 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.46 7.77a16 16 0 006.5 6.5l1.13-1.13a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg><span>+254 700 000 000</span></div>
+        <div class="footer-contact-item"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>hello@al-jabrisafi.com</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 AL-Jabrisafi Organic Beauty. All rights reserved.</p>
+      <p>Built by <a href="mailto:njugunadevs@gmail.com" style="color:var(--silver)">Njuguna Devs</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- Overlays -->
+<div id="cart-overlay" role="presentation"></div>
+<aside id="cart-sidebar" role="complementary" aria-label="Shopping cart">
+  <div class="cart-header">
+    <h3><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 001.99 1.61h9.72a2 2 0 001.99-1.61L23 6H6"/></svg>Your Order</h3>
+    <button class="cart-close" onclick="closeCart()" aria-label="Close cart">&times;</button>
+  </div>
+  <div class="cart-body" id="cart-body">
+    <div class="cart-empty">
+      <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 001.99 1.61h9.72a2 2 0 001.99-1.61L23 6H6"/></svg>
+      <p>Your order is empty.<br>Browse our products above.</p>
+    </div>
+  </div>
+  <div class="cart-footer" id="cart-footer">
+    <div class="cart-subtotal"><span>Order Total</span><span>KES 0</span></div>
+    <p class="cart-note">📦 Delivery charges applied at confirmation</p>
+    <button class="btn-checkout" disabled>Place My Order</button>
+  </div>
+</aside>
+
+<div id="modal-overlay" role="dialog" aria-modal="true" aria-label="Product details"></div>
+<div id="checkout-overlay" role="dialog" aria-modal="true" aria-label="Place your order"></div>
+<div id="toast-container" aria-live="polite"></div>
+
+<script src="js/main.js"></script>
+<script>
+  // Products page: read URL param for category on load
+  (function() {
+    const params = new URLSearchParams(window.location.search);
+    const cat = params.get('cat');
+    if (cat) {
+      document.addEventListener('DOMContentLoaded', () => {
+        const btn = document.querySelector(`.filter-btn[data-cat="${cat}"]`);
+        if (btn) { btn.click(); }
+        const sideBtn = document.querySelector(`.sidebar-cat-btn[onclick*="'${cat}'"]`);
+        if (sideBtn) {
+          document.querySelectorAll('.sidebar-cat-btn').forEach(b => b.classList.remove('active'));
+          sideBtn.classList.add('active');
+        }
+      });
+    }
+  })();
+
+  let currentCat = 'all';
+  let currentMaxPrice = 6000;
+  let currentSort = 'default';
+
+  function filterByCategory(cat, btn, source) {
+    currentCat = cat;
+
+    // Update top filter tabs
+    if (source !== 'sidebar') {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      // sync sidebar
+      document.querySelectorAll('.sidebar-cat-btn').forEach(b => {
+        b.classList.toggle('active', b.onclick && b.onclick.toString().includes("'"+cat+"'"));
+      });
+    } else {
+      document.querySelectorAll('.sidebar-cat-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      // sync top tabs
+      document.querySelectorAll('.filter-btn').forEach(b => {
+        b.classList.toggle('active', b.dataset.cat === cat);
+      });
+    }
+    applyFilters();
+  }
+
+  function updatePriceFilter(val) {
+    currentMaxPrice = parseInt(val);
+    document.getElementById('price-max-label').textContent =
+      val >= 6000 ? 'KES 6,000+' : 'KES ' + parseInt(val).toLocaleString();
+    applyFilters();
+  }
+
+  function sortProducts(val) {
+    currentSort = val;
+    applyFilters();
+  }
+
+  function applyFilters() {
+    let filtered = currentCat === 'all' ? [...products] : products.filter(p => p.category === currentCat);
+    filtered = filtered.filter(p => p.price <= currentMaxPrice || currentMaxPrice >= 6000);
+
+    if (currentSort === 'price-asc') filtered.sort((a,b) => a.price - b.price);
+    else if (currentSort === 'price-desc') filtered.sort((a,b) => b.price - a.price);
+    else if (currentSort === 'name') filtered.sort((a,b) => a.name.localeCompare(b.name));
+
+    const grid = document.getElementById('products-grid');
+    const countEl = document.getElementById('products-count');
+    if (countEl) countEl.textContent = `Showing ${filtered.length} product${filtered.length !== 1 ? 's' : ''}`;
+    if (grid) {
+      grid.innerHTML = filtered.length
+        ? filtered.map(p => buildProductCard(p)).join('')
+        : `<div style="grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--text-l)">
+             <p style="font-family:var(--ff-head);font-size:1.3rem;color:var(--text-m)">No products found</p>
+             <p style="font-size:0.82rem;margin-top:8px">Try adjusting your filters</p>
+           </div>`;
+
+      filtered.forEach((_, i) => {
+        const card = grid.children[i];
+        if (card) {
+          card.style.opacity = 0;
+          card.style.transform = 'translateY(16px)';
+          card.style.transition = `opacity .45s ease, transform .45s ease`;
+          setTimeout(() => { card.style.opacity = 1; card.style.transform = 'none'; }, i * 55);
+        }
+      });
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    applyFilters();
+  });
+</script>
+</body>
+</html>

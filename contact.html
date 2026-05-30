@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — AL-Jabrisafi Organic Beauty | Nairobi & Bungoma, Kenya</title>
+  <meta name="description" content="Get in touch with AL-Jabrisafi Organic Beauty. Order inquiries, product questions, wholesale and general enquiries. Visit us in Nairobi or Bungoma, Kenya or reach out via WhatsApp, email or our contact form.">
+  <meta name="keywords" content="contact AL-Jabrisafi, organic beauty Kenya contact, natural skincare Nairobi phone, beauty products Bungoma Kenya">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://al-jabrisafi.com/contact.html">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='16' fill='%231F3A36'/><path d='M16 8 Q20 12 16 16 Q12 12 16 8Z' fill='%23C0C0C0'/></svg>">
+  <style>
+    .faq-item {
+      border-bottom: 1px solid var(--cream-d);
+      padding: 18px 0;
+    }
+    .faq-q {
+      width:100%; background:none; border:none;
+      text-align:left; cursor:pointer;
+      display:flex; justify-content:space-between; align-items:center;
+      font-family:var(--ff-head); font-size:1rem; color:var(--text);
+      font-weight:600; padding:0;
+    }
+    .faq-q svg { width:18px; height:18px; fill:none; stroke:var(--text-m); stroke-width:2; flex-shrink:0; transition:transform .3s; }
+    .faq-q.open svg { transform:rotate(180deg); stroke:var(--green); }
+    .faq-a {
+      font-size:0.83rem; color:var(--text-m); line-height:1.8;
+      max-height:0; overflow:hidden;
+      transition:max-height .4s ease, padding .3s;
+    }
+    .faq-a.open { max-height:200px; padding-top:10px; }
+    .whatsapp-float {
+      position:fixed; bottom:28px; left:28px;
+      background:#25D366; color:var(--white);
+      width:54px; height:54px; border-radius:50%;
+      display:flex; align-items:center; justify-content:center;
+      box-shadow:0 6px 24px rgba(37,211,102,0.4);
+      z-index:200; transition:transform .25s, box-shadow .25s;
+      text-decoration:none;
+    }
+    .whatsapp-float:hover { transform:scale(1.1); box-shadow:0 10px 30px rgba(37,211,102,0.5); }
+    .whatsapp-float svg { width:28px; height:28px; fill:var(--white); }
+  </style>
+</head>
+<body>
+
+<!-- Promo Banner -->
+<div id="promo-banner">
+  🌿 FREE DELIVERY on orders over KES 5,000 &nbsp;|&nbsp; 100% Natural Ingredients &nbsp;|&nbsp; Handcrafted in Kenya
+</div>
+
+<!-- Navigation -->
+<nav id="main-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <a href="index.html" aria-label="AL-Jabrisafi Home">
+        <img src="images/al jabri logo.jpeg" alt="AL-Jabrisafi Logo" class="logo-mark" style="max-height: 48px; width: auto;">
+        <div class="logo-text">
+          <span class="logo-name">AL-JABRISAFI</span>
+          <span class="logo-sub">Organic Beauty</span>
+        </div>
+      </a>
+    </div>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Shop</a></li>
+      <li><a href="products.html?cat=skincare">Skincare</a></li>
+      <li><a href="products.html?cat=haircare">Haircare</a></li>
+      <li><a href="products.html?cat=wellness">Wellness</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="products.html" class="nav-icon-btn" aria-label="Search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </a>
+      <button class="nav-icon-btn cart-btn" aria-label="Open cart">
+        <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 001.99 1.61h9.72a2 2 0 001.99-1.61L23 6H6"/></svg>
+        <span class="cart-count" id="cart-count">0</span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<nav class="mobile-menu" id="mobile-menu">
+  <button class="mobile-close" id="mobile-close">&times;</button>
+  <a href="index.html">Home</a>
+  <a href="products.html">Shop All</a>
+  <a href="products.html?cat=skincare">Skincare</a>
+  <a href="products.html?cat=haircare">Haircare</a>
+  <a href="products.html?cat=wellness">Wellness</a>
+  <a href="about.html">About Us</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<!-- ── CONTACT HERO ── -->
+<section class="contact-hero">
+  <div class="container" style="position:relative;z-index:1;">
+    <p class="section-label" style="color:var(--silver);display:block;margin-bottom:12px;">We'd Love to Hear from You</p>
+    <h1 style="font-family:var(--ff-head);font-size:clamp(2.2rem,4vw,3rem);color:var(--white);font-weight:700;">Get in Touch</h1>
+    <p style="color:rgba(255,255,255,0.65);margin-top:10px;font-size:0.9rem;">Questions, orders, wholesale enquiries — we're here to help. Real people, real responses.</p>
+  </div>
+</section>
+
+<!-- ── CONTACT MAIN ── -->
+<section class="contact-main">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Contact Info -->
+      <div>
+        <div class="contact-info reveal-left">
+          <p class="section-label" style="margin-bottom:8px;">Direct Contact</p>
+          <h2>Talk to Us</h2>
+          <p>We respond to every message personally. No bots, no auto-replies — just the AL-Jabrisafi team, ready to help you find the right product and ensure your order arrives perfectly.</p>
+        </div>
+
+        <div class="reveal-left" style="margin-top:32px;">
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.47 8.64a19.79 19.79 0 01-3.07-8.6A2 2 0 012.37 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.46 7.77a16 16 0 006.5 6.5l1.13-1.13a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+            </div>
+            <div class="contact-detail-text">
+              <div class="label">Call / WhatsApp</div>
+              <div class="value">+254 700 000 000</div>
+            </div>
+          </div>
+
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div class="contact-detail-text">
+              <div class="label">Email Us</div>
+              <div class="value">hello@al-jabrisafi.com</div>
+            </div>
+          </div>
+
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="contact-detail-text">
+              <div class="label">Nairobi Location</div>
+              <div class="value">Nairobi, Kenya<br><span style="font-size:0.75rem;color:var(--text-l);">Contact us for exact address</span></div>
+            </div>
+          </div>
+
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="contact-detail-text">
+              <div class="label">Bungoma Location</div>
+              <div class="value">Bungoma, Kenya<br><span style="font-size:0.75rem;color:var(--text-l);">Contact us for exact address</span></div>
+            </div>
+          </div>
+
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="contact-detail-text">
+              <div class="label">Business Hours</div>
+              <div class="value">Monday – Saturday: 8:00am – 7:00pm<br><span style="font-size:0.75rem;color:var(--text-l);">Sunday: By appointment</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social Links -->
+        <div class="reveal-left" style="margin-top:32px; padding:24px; background:var(--green); border-radius:4px;">
+          <p style="font-size:0.62rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--silver);margin-bottom:14px;">Follow Our Journey</p>
+          <div style="display:flex;gap:12px;">
+            <a href="#" style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.8);font-size:0.78rem;font-weight:600;transition:color.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.8)'">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="rgba(255,255,255,0.7)"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              Instagram
+            </a>
+            <a href="#" style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.8);font-size:0.78rem;font-weight:600;transition:color.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.8)'">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="rgba(255,255,255,0.7)"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+              Facebook
+            </a>
+            <a href="#" style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.8);font-size:0.78rem;font-weight:600;transition:color.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.8)'">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="rgba(255,255,255,0.7)"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"/></svg>
+              TikTok
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form-wrap reveal-right">
+        <h3>Send Us a Message</h3>
+        <p style="font-size:0.82rem;color:var(--text-m);margin-bottom:24px;line-height:1.7;">
+          Whether it's a product question, a custom order, a wholesale inquiry or just to say hello — fill in the form below and we'll get back to you within 24 hours.
+        </p>
+        <form id="contact-form" novalidate>
+          <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+          <input type="hidden" name="subject" value="🌿 New Inquiry — AL-Jabrisafi Website">
+          <input type="hidden" name="from_name" value="AL-Jabrisafi Contact Form">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="c-name">Full Name *</label>
+              <input type="text" id="c-name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="c-phone">Phone Number *</label>
+              <input type="tel" id="c-phone" name="phone" placeholder="07xx xxx xxx" required>
+            </div>
+          </div>
+          <div class="form-row single">
+            <div class="form-group">
+              <label for="c-email">Email Address</label>
+              <input type="email" id="c-email" name="email" placeholder="your@email.com">
+            </div>
+          </div>
+          <div class="form-row single">
+            <div class="form-group">
+              <label for="c-subject">Subject *</label>
+              <select id="c-subject" name="inquiry_type" required>
+                <option value="">Select a topic...</option>
+                <option>Product Question</option>
+                <option>Order Inquiry</option>
+                <option>Wholesale / Bulk Order</option>
+                <option>Delivery Information</option>
+                <option>Feedback / Review</option>
+                <option>Collaboration / Partnership</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row single">
+            <div class="form-group">
+              <label for="c-city">Your City</label>
+              <select id="c-city" name="city">
+                <option value="">Select your city...</option>
+                <option>Nairobi</option>
+                <option>Bungoma</option>
+                <option>Mombasa</option>
+                <option>Kisumu</option>
+                <option>Nakuru</option>
+                <option>Eldoret</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row single">
+            <div class="form-group">
+              <label for="c-msg">Your Message *</label>
+              <textarea id="c-msg" name="message" placeholder="Tell us how we can help you..." required style="min-height:130px;"></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn-submit-order" id="contact-submit-btn">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section style="padding:80px 0; background:var(--cream-d);">
+  <div class="container">
+    <div class="reveal" style="text-align:center; margin-bottom:48px;">
+      <p class="section-label">Got Questions?</p>
+      <h2 class="section-title">Frequently Asked</h2>
+    </div>
+    <div style="max-width:720px; margin:0 auto;">
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          How do I place an order?
+          <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a">
+          Browse our shop, add items to your order, then proceed to checkout. Fill in your name, phone number and delivery address. We'll contact you directly via call or WhatsApp to confirm your order and arrange payment and delivery — no online payment needed.
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What payment methods do you accept?
+          <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a">
+          We accept M-Pesa (Lipa na M-Pesa or M-Pesa send money), Cash on Delivery (Nairobi and Bungoma), and bank transfer for bulk/wholesale orders. We confirm payment methods personally when we call to confirm your order.
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Do you deliver outside Nairobi and Bungoma?
+          <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a">
+          Yes! We use reliable courier partners to deliver across Kenya. Delivery fees and timelines for upcountry orders vary. Contact us on WhatsApp and we'll give you a delivery quote to your specific location.
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Are your products suitable for all skin types?
+          <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a">
+          Most of our products are formulated for all skin types, including sensitive skin. Each product listing specifies suitability. If you have specific skin concerns or conditions, feel free to WhatsApp us and we'll guide you to the right products for your needs.
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Do you offer bulk or wholesale pricing?
+          <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a">
+          Yes, we offer wholesale pricing for retailers, salons, spas and resellers. Reach out via our contact form or WhatsApp with your requirements and we'll share our wholesale catalogue and pricing.
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          How long does delivery take?
+          <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a">
+          Nairobi deliveries: same day or next day. Bungoma: 1–2 days. Upcountry Kenya: 2–4 business days depending on your location. We'll confirm your estimated delivery time when we confirm your order.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/254700000000?text=Hello%20AL-Jabrisafi!%20I'd%20like%20to%20inquire%20about%20your%20products."
+   class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+</a>
+
+<!-- ── FOOTER ── -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-name">AL-JABRISAFI</div>
+        <div class="logo-sub">Organic Beauty</div>
+        <p>Premium natural beauty products handcrafted with African botanicals. Delivering luxury skincare, haircare and wellness across Kenya.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" class="social-btn" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="#" class="social-btn" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"/></svg></a>
+          <a href="#" class="social-btn" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Shop All</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="products.html?cat=skincare">Skincare</a></li>
+          <li><a href="products.html?cat=haircare">Haircare</a></li>
+          <li><a href="products.html?cat=wellness">Wellness</a></li>
+          <li><a href="products.html?cat=giftsets">Gift Sets</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <div class="footer-contact-item"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Nairobi &amp; Bungoma, Kenya</span></div>
+        <div class="footer-contact-item"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.47 8.64a19.79 19.79 0 01-3.07-8.6A2 2 0 012.37 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.46 7.77a16 16 0 006.5 6.5l1.13-1.13a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg><span>+254 700 000 000</span></div>
+        <div class="footer-contact-item"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>hello@al-jabrisafi.com</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 AL-Jabrisafi Organic Beauty. All rights reserved.</p>
+      <p>Built by <a href="mailto:njugunadevs@gmail.com" style="color:var(--silver)">Njuguna Devs</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- Overlays -->
+<div id="cart-overlay" role="presentation"></div>
+<aside id="cart-sidebar" role="complementary" aria-label="Shopping cart">
+  <div class="cart-header">
+    <h3><svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 001.99 1.61h9.72a2 2 0 001.99-1.61L23 6H6"/></svg>Your Order</h3>
+    <button class="cart-close" onclick="closeCart()">&times;</button>
+  </div>
+  <div class="cart-body" id="cart-body">
+    <div class="cart-empty"><svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 001.99 1.61h9.72a2 2 0 001.99-1.61L23 6H6"/></svg><p>Your order is empty.</p></div>
+  </div>
+  <div class="cart-footer" id="cart-footer">
+    <div class="cart-subtotal"><span>Order Total</span><span>KES 0</span></div>
+    <p class="cart-note">📦 Delivery charges applied at confirmation</p>
+    <button class="btn-checkout" disabled>Place My Order</button>
+  </div>
+</aside>
+<div id="modal-overlay" role="dialog" aria-modal="true"></div>
+<div id="checkout-overlay" role="dialog" aria-modal="true"></div>
+<div id="toast-container" aria-live="polite"></div>
+
+<script src="js/main.js"></script>
+<script>
+  function toggleFaq(btn) {
+    const answer = btn.nextElementSibling;
+    const isOpen = btn.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.faq-q').forEach(q => {
+      q.classList.remove('open');
+      q.nextElementSibling.classList.remove('open');
+    });
+    // Open this one if it was closed
+    if (!isOpen) {
+      btn.classList.add('open');
+      answer.classList.add('open');
+    }
+  }
+</script>
+</body>
+</html>
