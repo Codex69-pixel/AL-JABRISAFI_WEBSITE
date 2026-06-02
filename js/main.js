@@ -208,6 +208,35 @@ const heroSlides = [
   { img: "images/1000139499.jpg", name: "Premium Gift Set", sub: "Luxury in a Box",        price: "KES 5,500" },
 ];
 
+// ========================================================
+// FAQ Accordion Functionality
+// ========================================================
+
+document.addEventListener('DOMContentLoaded', function() {
+  // FAQ Accordion
+  const faqItems = document.querySelectorAll('.faq-item');
+  
+  if (faqItems.length > 0) {
+    faqItems.forEach(item => {
+      const questionBtn = item.querySelector('.faq-question');
+      
+      questionBtn.addEventListener('click', () => {
+        // Close other open FAQs (optional - for single open at a time)
+        // Uncomment the code below if you want only one FAQ open at a time
+        /*
+        faqItems.forEach(otherItem => {
+          if (otherItem !== item && otherItem.classList.contains('active')) {
+            otherItem.classList.remove('active');
+          }
+        });
+        */
+        
+        // Toggle current FAQ
+        item.classList.toggle('active');
+      });
+    });
+  }
+});
 // ── Cart State ────────────────────────────────────────
 let cart = JSON.parse(localStorage.getItem('ajsCart') || '[]');
 
